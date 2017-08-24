@@ -213,11 +213,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void fillDatabaseEN() {
-        sql.execSQL("CREATE TABLE IF NOT EXISTS body (bodypart VARCHAR, lOrR VARCHAR, desc VARCHAR, drugs VARCHAR)");
-    }
+//    private void fillDatabaseEN() {
+//        sql.execSQL("CREATE TABLE IF NOT EXISTS body (bodypart VARCHAR, lOrR VARCHAR, desc VARCHAR, drugs VARCHAR)");
+//    }
 
-    //Load navigation menu header information
+    /***
+    Load navigation menu header information
+     */
     private void loadNavHeader() {
         txtName.setText("your name");
         txtAge.setText("your Age");
@@ -318,7 +320,7 @@ public class MainActivity extends AppCompatActivity {
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                    case R.id.home:
+                    case R.id.nav_home:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
                         break;
